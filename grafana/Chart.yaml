@@ -1,0 +1,11 @@
+---
+apiVersion: v2
+name: grafana
+description: A custom grafana stack chart
+type: application
+version: 0.1.0
+appVersion: "2.16.0"  # 这里可写对应 Prometheus 版本或者你想标注的版本
+dependencies:
+  - name: grafana/mimir-distributed
+    version: 5.7.0
+    repository: "https://grafana.github.io/helm-charts"

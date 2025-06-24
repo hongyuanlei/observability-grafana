@@ -1,0 +1,35 @@
+adminPassword: "admin-1234"
+
+persistence:
+  enabled: true
+  size: 5Gi
+  storageClassName: "standard"
+
+sidecar:
+  dashboards:
+    enabled: true
+    label: grafana_dashboard
+    folder: /tmp/dashboards
+    searchNamespace: ALL
+  datasources:
+    enabled: true
+    label: grafana_datasource
+    searchNamespace: ALL
+
+datasources:
+  datasources.yaml:
+    apiVersion: 1
+    datasources:
+      - name: Mimir
+        type: prometheus
+        access: proxy
+        url: http://mimir-gateway.observability/prometheus
+        isDefault: true
+        jsonData:
+          httpMethod: POST
+          timeInterval: 30s
+      - name: Prometheus
+        type: prometheus
+        access: proxy
+        url: http://prometheus-prometheus.observability:9090
+        isDefault: false
