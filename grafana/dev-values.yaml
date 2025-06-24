@@ -1,5 +1,16 @@
 adminPassword: "admin-1234"
 
+nameOverride: mimir
+fullnameOverride: mimir
+
+alertmanager:
+  enabled: false
+
+ingester:
+  zoneAwareReplication:
+    enabled: false
+  replicas: 1
+
 persistence:
   enabled: true
   size: 5Gi
