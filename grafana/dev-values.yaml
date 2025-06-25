@@ -6,6 +6,16 @@ grafana:
     size: 5Gi
     storageClassName: "standard"
 
+  podSecurityContext:
+    runAsUser: 472
+    runAsGroup: 472
+    fsGroup: 472
+    fsGroupChangePolicy: "OnRootMismatch"
+
+  securityContext:
+    runAsUser: 472
+    runAsGroup: 472
+
   sidecar:
     dashboards:
       enabled: true
