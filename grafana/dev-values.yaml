@@ -24,7 +24,7 @@ grafana:
         - name: Mimir
           type: prometheus
           access: proxy
-          url: http://mimir-gateway.observability/prometheus
+          url: http://mimir-nginx.observability/prometheus
           isDefault: true
           jsonData:
             httpMethod: POST
