@@ -34,6 +34,6 @@ grafana:
           access: proxy
           url: http://prometheus-prometheus.observability:9090
           isDefault: false
-          jsonData:
-            timeInterval: "30s"
-            httpMethod: GET
+#          jsonData:
+#            timeInterval: "30s"
+#            httpMethod: GET
