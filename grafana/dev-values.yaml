@@ -1,5 +1,6 @@
 grafana:
   adminPassword: "admin-1234"
+  initChownData: false  # 👈 skip the problematic init container
 
   persistence:
     enabled: true
