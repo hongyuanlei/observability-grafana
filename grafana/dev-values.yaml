@@ -39,7 +39,7 @@ grafana:
         access: proxy
         url: http://mimir-nginx.observability/prometheus
         isDefault: true
-        editable: true
+        editable: false
         jsonData:
           httpMethod: POST
           timeInterval: 30s
@@ -48,7 +48,7 @@ grafana:
         type: prometheus
         access: proxy
         url: http://prometheus-prometheus.observability:9090
-        editable: true
+        editable: false
         isDefault: false
         jsonData:
           timeInterval: "30s"
