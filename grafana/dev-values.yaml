@@ -29,27 +29,18 @@ grafana:
       label: grafana_datasource
       searchNamespace: ALL
 
-  datasources:
-    datasources.yaml:
-      apiVersion: 1
-      datasources:
-      - name: Mimir
-        uid: 45CC07CEF6D74D91BE989
-        type: prometheus
-        access: proxy
-        url: "http://mimir-nginx.observability/prometheus"
-        isDefault: true
-        editable: false
-        jsonData:
-          httpMethod: POST
-          timeInterval: 30s
-#      - name: Prometheus
-#        uid: 464EDC8622694ECA9847
+# Use the grafana sidecar to auto find the datasource config, for example: mimir/templates/configmap-mimir-datasource.yaml
+#  datasources:
+#    datasources.yaml:
+#      apiVersion: 1
+#      datasources:
+#      - name: Mimir
+#        uid: 45CC07CEF6D74D91BE989
 #        type: prometheus
 #        access: proxy
-#        url: "http://prometheus-prometheus.observability:9090"
+#        url: "http://mimir-nginx.observability/prometheus"
+#        isDefault: true
 #        editable: false
-#        isDefault: false
 #        jsonData:
-#          timeInterval: "30s"
-#          httpMethod: GET
+#          httpMethod: POST
+#          timeInterval: 30s
