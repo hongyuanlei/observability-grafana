@@ -43,13 +43,13 @@ grafana:
         jsonData:
           httpMethod: POST
           timeInterval: 30s
-      - name: Prometheus
-        uid: 464EDC8622694ECA9847
-        type: prometheus
-        access: proxy
-        url: "http://prometheus-prometheus.observability:9090"
-        editable: false
-        isDefault: false
-        jsonData:
-          timeInterval: "30s"
-          httpMethod: GET
+#      - name: Prometheus
+#        uid: 464EDC8622694ECA9847
+#        type: prometheus
+#        access: proxy
+#        url: "http://prometheus-prometheus.observability:9090"
+#        editable: false
+#        isDefault: false
+#        jsonData:
+#          timeInterval: "30s"
+#          httpMethod: GET
