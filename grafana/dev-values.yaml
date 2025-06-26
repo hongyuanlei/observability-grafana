@@ -41,11 +41,11 @@ grafana:
           jsonData:
             httpMethod: POST
             timeInterval: 30s
-        - name: Prometheus
-          type: prometheus
-          access: proxy
-          url: http://prometheus-prometheus.observability:9090
-          isDefault: false
+#        - name: Prometheus
+#          type: prometheus
+#          access: proxy
+#          url: http://prometheus-prometheus.observability:9090
+#          isDefault: false
 #          jsonData:
 #            timeInterval: "30s"
 #            httpMethod: GET
