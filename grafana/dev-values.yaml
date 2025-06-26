@@ -37,7 +37,7 @@ grafana:
         uid: 45CC07CEF6D74D91BE989
         type: prometheus
         access: proxy
-        url: http://mimir-nginx.observability/prometheus
+        url: "http://mimir-nginx.observability/prometheus"
         isDefault: true
         editable: false
         jsonData:
@@ -47,7 +47,7 @@ grafana:
         uid: 464EDC8622694ECA9847
         type: prometheus
         access: proxy
-        url: http://prometheus-prometheus.observability:9090
+        url: "http://prometheus-prometheus.observability:9090"
         editable: false
         isDefault: false
         jsonData:
