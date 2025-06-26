@@ -34,6 +34,7 @@ grafana:
       apiVersion: 1
       datasources:
       - name: Mimir
+        uid: 45CC07CEF6D74D91BE989
         type: prometheus
         access: proxy
         url: http://mimir-nginx.observability/prometheus
@@ -43,6 +44,7 @@ grafana:
           httpMethod: POST
           timeInterval: 30s
       - name: Prometheus
+        uid: 464EDC8622694ECA9847
         type: prometheus
         access: proxy
         url: http://prometheus-prometheus.observability:9090
