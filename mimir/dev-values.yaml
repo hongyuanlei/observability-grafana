@@ -12,10 +12,10 @@ mimir-distributed:
   query_scheduler:
     enabled: false
 
-  distributor:
-    extraArgs:
-      "-distributor.ingestion-rate-limit=50000"
-      "-distributor.ingestion-burst-size=500000"
+#  distributor:
+#    extraArgs:
+#      "-distributor.ingestion-rate-limit=50000"
+#      "-distributor.ingestion-burst-size=500000"
 
   ingester:
     # -- Total number of replicas for the store-gateway across all availability zones
