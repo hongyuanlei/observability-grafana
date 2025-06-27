@@ -5,6 +5,10 @@ mimir-distributed:
   alertmanager:
     enabled: false
 
+  query_frontend:
+    extraArgs:
+      log.level: debug
+
   query_scheduler:
     enabled: false
 
@@ -20,6 +24,8 @@ mimir-distributed:
     # mimir-ingester-zone-c-0
     zoneAwareReplication:
       enabled: false
+    extraArgs:
+      log.level: debug
 
   store_gateway:
     # -- Total number of replicas for the store-gateway across all availability zones
