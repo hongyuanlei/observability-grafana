@@ -5,6 +5,8 @@ mimir-distributed:
   alertmanager:
     enabled: false
 
+  gateway:
+    enabled: true
   ingester:
     # -- Total number of replicas for the store-gateway across all availability zones
     # If store_gateway.zoneAwareReplication.enabled=false, this number is taken as is.
