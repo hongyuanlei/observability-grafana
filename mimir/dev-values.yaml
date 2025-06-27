@@ -12,6 +12,9 @@ mimir-distributed:
   query_scheduler:
     enabled: false
 
+  runtimeConfig:
+    distributor_limits:
+      max_ingestion_rate: 50000
 #  distributor:
 #    extraArgs:
 #      "-distributor.ingestion-rate-limit=50000"
