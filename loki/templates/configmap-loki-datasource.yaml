@@ -11,7 +11,7 @@ data:
     datasources:
       - name: Loki
         uid: 26520287B2594D8C9248
-        type: prometheus
+        type: loki
         access: proxy
         url: "http://loki-gateway.observability/loki"
         isDefault: false
