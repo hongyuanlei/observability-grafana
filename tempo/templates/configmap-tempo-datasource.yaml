@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: ConfigMap
 metadata:
-  name: mimir-datasource
+  name: tempo-datasource
   namespace: observability
   labels:
     grafana_datasource: "true"
