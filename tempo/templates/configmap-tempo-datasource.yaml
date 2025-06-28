@@ -13,7 +13,7 @@ data:
         uid: 096EF9188B484FBB9C90
         type: tempo
         access: proxy
-        url: "http://tempo-gateway.observability/api"
+        url: "http://tempo-gateway.observability"
         isDefault: false
         editable: false
         jsonData:
