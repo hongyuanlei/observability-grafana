@@ -1,0 +1,11 @@
+tempo-distributed:
+  fullnameOverride: tempo
+  queryFrontend:
+    query:
+      enabled: true
+  traces:
+    otlp:
+      http:
+        enabled: true
+      grpc:
+        enabled: true
