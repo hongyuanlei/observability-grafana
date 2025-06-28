@@ -9,3 +9,5 @@ tempo-distributed:
         enabled: true
       grpc:
         enabled: true
+  gateway:
+    enabled: true
