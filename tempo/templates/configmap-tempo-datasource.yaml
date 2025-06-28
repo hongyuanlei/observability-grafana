@@ -1,0 +1,38 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: mimir-datasource
+  namespace: observability
+  labels:
+    grafana_datasource: "true"
+data:
+  datasource-config.yaml: |
+    apiVersion: 1
+    datasources:
+      - name: Tempo
+        uid: 096EF9188B484FBB9C90
+        type: tempo
+        access: proxy
+        url: "http://tempo-gateway.observability/api"
+        isDefault: false
+        editable: false
+        jsonData:
+          httpMethod: GET
+          tracesToLogsV2:
+            datasource: Loki
+            spanStartTimeShift: 5m
+            spanEndTimeShift: 5m
+            filterByTraceID: true
+            filterBySpanID: false
+            tags: ['job', 'instance', 'pod', 'namespace']
+          tracesToMetrics:
+            datasource: Mimir
+            spanStartTimeShift: 5m
+            spanEndTimeShift: 5m
+            tags: ['service.name']
+          serviceMap:
+            datasource: Mimir
+          nodeGraph:
+            enabled: true
+          lokiSearch:
+            datasource: Loki
