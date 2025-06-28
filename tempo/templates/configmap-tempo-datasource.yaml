@@ -6,7 +6,7 @@ metadata:
   labels:
     grafana_datasource: "true"
 data:
-  datasource-config.yaml: |
+  tempo-datasource-config.yaml: |
     apiVersion: 1
     datasources:
       - name: Tempo

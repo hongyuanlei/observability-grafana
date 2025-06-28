@@ -6,7 +6,7 @@ metadata:
   labels:
     grafana_datasource: "true"
 data:
-  datasource-config.yaml: |
+  mimir-datasource-config.yaml: |
     apiVersion: 1
     datasources:
       - name: Mimir
